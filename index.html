@@ -31,16 +31,25 @@
       grid-auto-rows: 1fr;
       gap: 1.5vmin;
     }
+    .ntulearn { --hue: 220; }
+    .ma1008 { --hue: 0; }
+    .ma2002 { --hue: 30; }
+    .ma2006 { --hue: 50; }
+    .ma0218 { --hue: 140; }
+    .ma2015 { --hue: 175; }
+    .cl0105 { --hue: 275; }
+    .cc0007 { --hue: 320; }
     a {
+      --hue: 220;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 0.5em;
       border-radius: 1.4vmin;
-      background: #ffffff;
-      border: 1px solid #d9dce1;
-      color: #1b1c1e;
+      background: hsl(var(--hue) 70% 95%);
+      border: 1px solid hsl(var(--hue) 55% 78%);
+      color: hsl(var(--hue) 60% 22%);
       text-decoration: none;
       font-size: clamp(0.85rem, 2.4vmin, 1.4rem);
       font-weight: 500;
@@ -49,8 +58,8 @@
       transition: background 0.15s, border-color 0.15s, transform 0.1s;
     }
     a:hover, a:focus-visible {
-      background: #e8f0fe;
-      border-color: #4a80d8;
+      background: hsl(var(--hue) 72% 88%);
+      border-color: hsl(var(--hue) 60% 50%);
     }
     a:active { transform: scale(0.98); }
     @media (max-aspect-ratio: 1/1) {
@@ -58,29 +67,36 @@
     }
     @media (prefers-color-scheme: dark) {
       body { background: #131417; color: #eceef1; }
-      a { background: #1e2025; border-color: #33363d; color: #eceef1; }
-      a:hover, a:focus-visible { background: #26303f; border-color: #5b8ddd; }
+      a {
+        background: hsl(var(--hue) 32% 18%);
+        border-color: hsl(var(--hue) 35% 34%);
+        color: hsl(var(--hue) 65% 85%);
+      }
+      a:hover, a:focus-visible {
+        background: hsl(var(--hue) 38% 26%);
+        border-color: hsl(var(--hue) 55% 55%);
+      }
     }
   </style>
 </head>
 <body>
   <h1>Links</h1>
   <div class="grid">
-    <a href="https://ntulearn.ntu.edu.sg/ultra/course">ntulearn</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705936_1/outline">ma1008 lecture</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705946_1/outline">ma1008 tutorial</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705969_1/outline">ma2002 lecture</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705977_1/outline">ma2002 tut</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706025_1/outline">ma2006 lec</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706029_1/outline">ma2006 tut</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705919_1/outline">ma0218 lec</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705920_1/outline">ma0218 tut</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2712766_1/outline">ma2015 lec</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2708927_1/outline">cl0105 lec</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2711935_1/outline">cl0105 le26</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706844_1/outline">cc0007 lec</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706936_1/outline">cc0007 class</a>
-    <a href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706939_1/outline">cc0007 cluster</a>
+    <a class="ntulearn" href="https://ntulearn.ntu.edu.sg/ultra/course">ntulearn</a>
+    <a class="ma1008" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705936_1/outline">ma1008 lecture</a>
+    <a class="ma1008" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705946_1/outline">ma1008 tutorial</a>
+    <a class="ma2002" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705969_1/outline">ma2002 lecture</a>
+    <a class="ma2002" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705977_1/outline">ma2002 tut</a>
+    <a class="ma2006" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706025_1/outline">ma2006 lec</a>
+    <a class="ma2006" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706029_1/outline">ma2006 tut</a>
+    <a class="ma0218" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705919_1/outline">ma0218 lec</a>
+    <a class="ma0218" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2705920_1/outline">ma0218 tut</a>
+    <a class="ma2015" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2712766_1/outline">ma2015 lec</a>
+    <a class="cl0105" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2708927_1/outline">cl0105 lec</a>
+    <a class="cl0105" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2711935_1/outline">cl0105 le26</a>
+    <a class="cc0007" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706844_1/outline">cc0007 lec</a>
+    <a class="cc0007" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706936_1/outline">cc0007 class</a>
+    <a class="cc0007" href="https://ntulearn.ntu.edu.sg/ultra/courses/_2706939_1/outline">cc0007 cluster</a>
   </div>
 </body>
 </html>
